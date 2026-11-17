@@ -1,5 +1,7 @@
 @echo off
+call "%~dp0..\project-paths.bat"
 REM CMS 部署配置（语聊测试服；使用 PuTTY .ppk，勿在此文件填写密码）
+set DEPLOY_ENABLED=1
 
 REM 远程服务器（语聊测试服 ec2-user @ 63.185.66.53）
 set REMOTE_HOST=63.185.66.53
@@ -11,7 +13,7 @@ REM SSH 密钥（PuTTY .ppk，由 D:\root\yuliao.pem 用 puttygen 转换）
 set SSH_KEY_PATH=D:\tools\ppk\yuliao.ppk
 
 REM 本地路径
-set LOCAL_PROJECT_ROOT=D:\company-code\sara-live-server
+set LOCAL_PROJECT_ROOT=%YULIAO_PROJECT_ROOT%
 set VUE_PROJECT_DIR=%LOCAL_PROJECT_ROOT%\cms
 set BUILD_OUTPUT_DIR=D:\root\cms
 

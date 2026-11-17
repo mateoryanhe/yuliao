@@ -3,6 +3,8 @@ setlocal EnableDelayedExpansion
 cd /d "%~dp0"
 
 call "%~dp0config.bat"
+call "%~dp0..\check-deploy-enabled.bat"
+if errorlevel 1 exit /b 1
 
 set BUILD_CMD=build:review
 set ZIP_FILE=upload_package_review.zip

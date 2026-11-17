@@ -1,5 +1,7 @@
 @echo off
-REM 语聊测试服 Go 发版（yuliao 分支；勿改回直播测试服 54.241.124.37）
+call "%~dp0..\project-paths.bat"
+REM 语聊测试服 Go 发版（勿改回直播测试服 54.241.124.37）
+set DEPLOY_ENABLED=1
 set REMOTE_HOST=63.185.66.53
 set REMOTE_USER=ec2-user
 set REMOTE_DIR=/home/ec2-user/xgameserver
@@ -7,7 +9,7 @@ REM /tmp 为容量较小的 tmpfs，发版包统一放到磁盘 staging
 set REMOTE_STAGE=/home/ec2-user/staging
 
 REM Local path configuration
-set LOCAL_PROJECT_PATH=D:\company-code\sara-live-server
+set LOCAL_PROJECT_PATH=%YULIAO_PROJECT_ROOT%
 set LOCAL_GO_SRC=%LOCAL_PROJECT_PATH%\go-src
 set LOCAL_CONFIG_PATH=%LOCAL_PROJECT_PATH%\config\yuliao\config.yaml
 REM 热重启一/二阶段秒数在 CMS preload_cfgs; deploy/restart 脚本等待默认各 60

@@ -1,0 +1,30 @@
+---
+description: 本工作区 yl 目录 = 新项目，对应 yuliao Git 仓库
+alwaysApply: true
+---
+
+# 项目与仓库对应
+
+- **本机工作区目录**：`D:\company-code\yl`（Cursor 当前打开的即此目录）
+- **Git 仓库名 / remote**：`yuliao`（`origin` → `https://github.com/mateoryanhe/yuliao.git`）
+- **定位**：**语聊新项目**；在本会话中说的「本项目 / 本仓库」均指 `yl` ↔ `yuliao`，不要与旧直播主仓路径混用
+
+## 勿混淆
+
+| | 新项目（本仓） | 旧直播主仓（历史路径，示例） |
+|---|---|---|
+| 本机目录 | `D:\company-code\yl` | `D:\company-code\sara-live-server` 等 |
+| 远程 | `mateoryanhe/yuliao` | 原 Sara/Sofie 直播仓库 |
+
+改代码、查 git、部署脚本、写备忘时，默认在 **`yl` / `yuliao`** 上操作；只有用户明确指定旧仓时才切到 `sara-live-server`。
+
+## 发版（pub-tool）
+
+- 本机根目录：`pub-tool/project-paths.bat` → `YULIAO_PROJECT_ROOT=D:\company-code\yl`
+- **当前仅测试服可发**：`go-test`、`cms-test` → 语聊测试 `63.185.66.53`，Go 配置 `config/yuliao/config.yaml`
+- 提审/正式（`go-review`、`go-prod`、`cms-review`、`cms-prod`）默认 `DEPLOY_ENABLED=0`，机器到位后再改 `config.bat` 并设为 `1`；详见 `pub-tool/DEPLOY.md`
+
+## 姊妹仓与共享规则
+
+- 直播主仓：`D:\company-code\sara-live-server`（`mateoryanhe/sara-live-server`）→ `project-sara-live-server.mdc`
+- 双仓日报、共享 Go/CMS 约定 → **`dual-repos-yuliao-sara.mdc`**（两仓各有一份，应保持同步）

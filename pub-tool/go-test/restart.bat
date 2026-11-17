@@ -5,6 +5,8 @@ cd /d "%~dp0"
 REM 仅热重启/冷启 fallback,不编译不上传.用于复现热重启窗口开播等测试.
 
 call "%~dp0config.bat"
+call "%~dp0..\check-deploy-enabled.bat"
+if errorlevel 1 exit /b 1
 
 set "PLINK=%~dp0plink.exe"
 if not exist "%PLINK%" if exist "%~dp0..\go-prod\plink.exe" set "PLINK=%~dp0..\go-prod\plink.exe"

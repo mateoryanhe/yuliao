@@ -5,6 +5,8 @@ cd /d "%~dp0"
 REM Hot restart first; cold restart fallback. Detect fork via process count / newest PID.
 
 call "%~dp0config.bat"
+call "%~dp0..\check-deploy-enabled.bat"
+if errorlevel 1 exit /b 1
 
 set "PLINK=%~dp0plink.exe"
 if not exist "%PLINK%" if exist "%~dp0..\go-prod\plink.exe" set "PLINK=%~dp0..\go-prod\plink.exe"

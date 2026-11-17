@@ -1,11 +1,13 @@
 ---
-description: 处理 sara-live-server 任务前先读取本地 agent 备忘
+description: 处理 yuliao（D:\company-code\yl）任务前先读取本地 agent 备忘
 alwaysApply: true
 ---
 
 处理本仓库任务前，先阅读：
 
 `.cursor/agent-notes/README.md`
+
+**姊妹仓直播主仓**：`D:\company-code\sara-live-server`；双仓约定与日报 → `dual-repos-yuliao-sara.mdc`、`project-sara-live-server.mdc`（路径在姊妹仓 `.cursor/rules/`）。写日报须两仓 `git log` + `git status`。
 
 若任务涉及服务器、CMS 列表、日志页或部署，继续读同目录下对应专题 md（servers / cms-conventions / changelog-notes）。
 

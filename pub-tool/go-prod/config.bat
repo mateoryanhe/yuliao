@@ -1,6 +1,10 @@
 @echo off
-set "RESTART_TITLE=XR Game Server Production Restart"
-REM Remote server configuration
+call "%~dp0..\project-paths.bat"
+set "RESTART_TITLE=XR Game Server Yuliao Production Restart"
+REM === 语聊正式机未到位：禁止发版（勿误连下方直播正式 IP）===
+set DEPLOY_ENABLED=0
+REM 到位后改 REMOTE_HOST / SSH_KEY_PATH / LOCAL_CONFIG_PATH，再 DEPLOY_ENABLED=1
+REM Remote server configuration（占位：直播正式）
 set REMOTE_HOST=54.177.166.38
 set REMOTE_USER=ec2-user
 set REMOTE_DIR=/home/ec2-user/xgameserver
@@ -8,7 +12,7 @@ REM Use REMOTE_STAGE on disk; /tmp is small tmpfs on servers
 set REMOTE_STAGE=/home/ec2-user/staging
 
 REM Local path configuration
-set LOCAL_PROJECT_PATH=D:\company-code\sara-live-server
+set LOCAL_PROJECT_PATH=%YULIAO_PROJECT_ROOT%
 set LOCAL_GO_SRC=%LOCAL_PROJECT_PATH%\go-src
 set LOCAL_CONFIG_PATH=%LOCAL_PROJECT_PATH%\config\prod\config.yaml
 REM Hot restart phase seconds in CMS preload_cfgs; deploy/restart wait default 60+60

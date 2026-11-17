@@ -15,6 +15,8 @@ if /i not "%DEPLOY_ENV%"=="test" if /i not "%DEPLOY_ENV%"=="prod" (
 )
 
 call "%~dp0config.bat"
+call "%~dp0..\check-deploy-enabled.bat"
+if errorlevel 1 exit /b 1
 
 if /i "%DEPLOY_ENV%"=="prod" (
     set BUILD_CMD=build:prod

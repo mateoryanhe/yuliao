@@ -29,10 +29,10 @@ XR Game Server 一键部署脚本 (PuTTY版)
 --------------------------------
 1. 确保已安装Go编译环境
 2. 确保PuTTY工具链已放置在本目录 (plink.exe 和 pscp.exe)
-3. 确保SSH密钥文件存在 (D:\prod-key\ytt.pem)
+3. 确保 PuTTY 密钥存在 (D:\tools\ppk\yuliao.ppk)
 4. 确保SSH密钥为PuTTY兼容格式(.ppk)，如果不是，请按以下步骤转换
-5. 确保源代码路径正确 (D:\go-project\xrgameserver\go-src)
-6. 确保配置文件路径正确 (D:\go-project\xrgameserver\config\dev)
+5. 源代码路径见 config.bat（YULIAO_PROJECT_ROOT=D:\company-code\yl）
+6. 语聊测试服配置: config\yuliao\config.yaml
 
 SSH密钥转换说明
 --------------------------------

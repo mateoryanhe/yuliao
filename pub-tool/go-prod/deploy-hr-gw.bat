@@ -2,6 +2,8 @@
 setlocal EnableDelayedExpansion
 cd /d "%~dp0"
 call "%~dp0config.bat"
+call "%~dp0..\check-deploy-enabled.bat"
+if errorlevel 1 exit /b 1
 
 echo ========================================
 echo Deploy %HR_GW_NAME% ONLY (no xr-game-server)

@@ -1,6 +1,7 @@
 @echo off
+call "%~dp0..\project-paths.bat"
 REM Go 本地编译/启动配置
-set LOCAL_PROJECT_ROOT=D:\company-code\sara-live-server
+set LOCAL_PROJECT_ROOT=%YULIAO_PROJECT_ROOT%
 set LOCAL_GO_SRC=%LOCAL_PROJECT_ROOT%\go-src
 set LOCAL_BUILD_PATH=%LOCAL_PROJECT_ROOT%\go-build
 set LOCAL_CONFIG_DIR=%LOCAL_PROJECT_ROOT%\config\local

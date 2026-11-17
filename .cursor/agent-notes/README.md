@@ -2,6 +2,19 @@
 
 > 本目录 + `.cursor/rules/` 存放运维、约定、事故备忘。
 
+## 本仓库定位（2026-11-17）
+
+- **本机目录**：`D:\company-code\yl`
+- **Git 仓库**：**yuliao**（`origin` → `https://github.com/mateoryanhe/yuliao.git`）
+- **新项目**（语聊线）；Agent 与用户说的「本项目」均指此处，勿与旧直播主仓目录（如 `D:\company-code\sara-live-server`）混用。
+
+### 发版脚本（2026-11-17）
+
+- 本机根：`pub-tool/project-paths.bat` → `D:\company-code\yl`
+- **可发版**：`pub-tool/go-test`、`pub-tool/cms-test`（语聊测试 `63.185.66.53` / `config/yuliao`）
+- **未到位**：`go-review`、`go-prod`、`cms-review`、`cms-prod` 设 `DEPLOY_ENABLED=0`，勿误连直播审/正式 IP
+- 说明：`pub-tool/DEPLOY.md`
+
 ## 规则索引（`.cursor/rules/`）
 
 | 文件 | 内容 |
@@ -14,6 +27,9 @@
 | [server-safety.mdc](../rules/server-safety.mdc) | 远程/数据库删除须问用户；**发版须用户同意** |
 | [flutter-push-subscribe.mdc](../rules/flutter-push-subscribe.mdc) | Flutter：PushBus 上 **Repository 与 ViewModel 各自订阅**（勿中心 revision 转 UI） |
 | [read-agent-notes.mdc](../rules/read-agent-notes.mdc) | 任务前必读入口 |
+| [dual-repos-yuliao-sara.mdc](../rules/dual-repos-yuliao-sara.mdc) | **双仓** yuliao ↔ sara-live-server；日报须两仓 git 核对 |
+| [daily-report.mdc](../rules/daily-report.mdc) | 日报/周报格式（含 `[yuliao]` / `[sara-live]`） |
+| [project-yl-yuliao.mdc](../rules/project-yl-yuliao.mdc) | 本仓定位（语聊 yuliao） |
 
 ## SSH
 

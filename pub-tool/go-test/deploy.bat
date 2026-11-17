@@ -8,6 +8,8 @@ REM Purpose: Compile Go program and deploy to remote server using PuTTY tools
 
 REM Load configuration
 call "%~dp0config.bat"
+call "%~dp0..\check-deploy-enabled.bat"
+if errorlevel 1 exit /b 1
 
 echo Starting deployment of XR Game Server...
 echo Target Server: %REMOTE_HOST%
