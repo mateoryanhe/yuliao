@@ -30,6 +30,7 @@ CMS 一键构建上传说明（PuTTY + .ppk 密钥）
   5. 校验远程 index.html 存在
 
 注意
+  upload.bat ends with "Press any key to close" so you can read the log.
   旧脚本会先 rm -rf 整个 REMOTE_DIR，若解压失败会导致 /cms 目录被清空。
   服务器 domainSites 映射: cms.bigtktool.shop -> /home/ec2-user/cdn/cms
   访问示例: https://cms.bigtktool.shop/

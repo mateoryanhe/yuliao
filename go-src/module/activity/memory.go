@@ -20,11 +20,13 @@ type cfgSnapshot struct {
 	TitlePt           string
 	TitleHi           string
 	TitleId           string
+	TitleAr           string
 	RechargeBtnTextEn string
 	RechargeBtnTextEs string
 	RechargeBtnTextPt string
 	RechargeBtnTextHi string
 	RechargeBtnTextId string
+	RechargeBtnTextAr string
 	FirstRechargeRatio float64
 	Privileges        []*activityentity.FirstRechargeActivityPrivilege
 	CreatedAt         string
@@ -73,11 +75,13 @@ func toCfgSnapshot(row *activityentity.FirstRechargeActivityCfg, privileges []*a
 		TitlePt:           row.TitlePt,
 		TitleHi:           row.TitleHi,
 		TitleId:           row.TitleId,
+		TitleAr:           row.TitleAr,
 		RechargeBtnTextEn: row.RechargeBtnTextEn,
 		RechargeBtnTextEs: row.RechargeBtnTextEs,
 		RechargeBtnTextPt: row.RechargeBtnTextPt,
 		RechargeBtnTextHi: row.RechargeBtnTextHi,
 		RechargeBtnTextId: row.RechargeBtnTextId,
+		RechargeBtnTextAr: row.RechargeBtnTextAr,
 		FirstRechargeRatio: normalizeFirstRechargeRatio(row.FirstRechargeRatio),
 		Privileges:        privileges,
 		CreatedAt:         formatTime(row.CreatedAt),
@@ -99,11 +103,13 @@ func toCfgItemFromSnapshot(snap *cfgSnapshot) *activitydto.FirstRechargeActivity
 		TitlePt:           snap.TitlePt,
 		TitleHi:           snap.TitleHi,
 		TitleId:           snap.TitleId,
+		TitleAr:           snap.TitleAr,
 		RechargeBtnTextEn: snap.RechargeBtnTextEn,
 		RechargeBtnTextEs: snap.RechargeBtnTextEs,
 		RechargeBtnTextPt: snap.RechargeBtnTextPt,
 		RechargeBtnTextHi: snap.RechargeBtnTextHi,
 		RechargeBtnTextId: snap.RechargeBtnTextId,
+		RechargeBtnTextAr: snap.RechargeBtnTextAr,
 		FirstRechargeRatio: snap.FirstRechargeRatio,
 		Privileges:        toPrivilegeDTOItems(snap.Privileges),
 		CreatedAt:         snap.CreatedAt,
@@ -126,11 +132,13 @@ func toAppRes(snap *cfgSnapshot) *activitydto.AppFirstRechargeActivityCfgRes {
 		TitlePt:            snap.TitlePt,
 		TitleHi:            snap.TitleHi,
 		TitleId:            snap.TitleId,
+		TitleAr:            snap.TitleAr,
 		RechargeBtnTextEn:  snap.RechargeBtnTextEn,
 		RechargeBtnTextEs:  snap.RechargeBtnTextEs,
 		RechargeBtnTextPt:  snap.RechargeBtnTextPt,
 		RechargeBtnTextHi:  snap.RechargeBtnTextHi,
 		RechargeBtnTextId:  snap.RechargeBtnTextId,
+		RechargeBtnTextAr:  snap.RechargeBtnTextAr,
 		FirstRechargeRatio: snap.FirstRechargeRatio,
 		Privileges:         toPrivilegeAppItems(snap.Privileges),
 	}

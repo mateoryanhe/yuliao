@@ -37,11 +37,13 @@ func Create(_ context.Context, req *vipcfgdto.CreateVipCfgReq) (*vipcfgdto.Creat
 		AnimationTitlePt:       req.AnimationTitlePt,
 		AnimationTitleHi:       req.AnimationTitleHi,
 		AnimationTitleId:       req.AnimationTitleId,
+		AnimationTitleAr:       req.AnimationTitleAr,
 		AnimationDescEn:        req.AnimationDescEn,
 		AnimationDescEs:        req.AnimationDescEs,
 		AnimationDescPt:        req.AnimationDescPt,
 		AnimationDescHi:        req.AnimationDescHi,
 		AnimationDescId:        req.AnimationDescId,
+		AnimationDescAr:        req.AnimationDescAr,
 		CommentEffect:          req.CommentEffect,
 		CommentEffectIcon:      req.CommentEffectIcon,
 		CommentEffectTitleEn:   req.CommentEffectTitleEn,
@@ -49,22 +51,26 @@ func Create(_ context.Context, req *vipcfgdto.CreateVipCfgReq) (*vipcfgdto.Creat
 		CommentEffectTitlePt:   req.CommentEffectTitlePt,
 		CommentEffectTitleHi:   req.CommentEffectTitleHi,
 		CommentEffectTitleId:   req.CommentEffectTitleId,
+		CommentEffectTitleAr:   req.CommentEffectTitleAr,
 		CommentEffectDescEn:    req.CommentEffectDescEn,
 		CommentEffectDescEs:    req.CommentEffectDescEs,
 		CommentEffectDescPt:    req.CommentEffectDescPt,
 		CommentEffectDescHi:    req.CommentEffectDescHi,
 		CommentEffectDescId:    req.CommentEffectDescId,
+		CommentEffectDescAr:    req.CommentEffectDescAr,
 		CustomerServiceIcon:    req.CustomerServiceIcon,
 		CustomerServiceTitleEn: req.CustomerServiceTitleEn,
 		CustomerServiceTitleEs: req.CustomerServiceTitleEs,
 		CustomerServiceTitlePt: req.CustomerServiceTitlePt,
 		CustomerServiceTitleHi: req.CustomerServiceTitleHi,
 		CustomerServiceTitleId: req.CustomerServiceTitleId,
+		CustomerServiceTitleAr: req.CustomerServiceTitleAr,
 		CustomerServiceDescEn:  req.CustomerServiceDescEn,
 		CustomerServiceDescEs:  req.CustomerServiceDescEs,
 		CustomerServiceDescPt:  req.CustomerServiceDescPt,
 		CustomerServiceDescHi:  req.CustomerServiceDescHi,
 		CustomerServiceDescId:  req.CustomerServiceDescId,
+		CustomerServiceDescAr:  req.CustomerServiceDescAr,
 	}
 	if err := cfgdao.CreateVipCfg(row); err != nil {
 		return nil, err
@@ -96,11 +102,13 @@ func Update(_ context.Context, req *vipcfgdto.UpdateVipCfgReq) (*vipcfgdto.Updat
 	updated.AnimationTitlePt = req.AnimationTitlePt
 	updated.AnimationTitleHi = req.AnimationTitleHi
 	updated.AnimationTitleId = req.AnimationTitleId
+	updated.AnimationTitleAr = req.AnimationTitleAr
 	updated.AnimationDescEn = req.AnimationDescEn
 	updated.AnimationDescEs = req.AnimationDescEs
 	updated.AnimationDescPt = req.AnimationDescPt
 	updated.AnimationDescHi = req.AnimationDescHi
 	updated.AnimationDescId = req.AnimationDescId
+	updated.AnimationDescAr = req.AnimationDescAr
 	updated.CommentEffect = req.CommentEffect
 	updated.CommentEffectIcon = req.CommentEffectIcon
 	updated.CommentEffectTitleEn = req.CommentEffectTitleEn
@@ -108,22 +116,26 @@ func Update(_ context.Context, req *vipcfgdto.UpdateVipCfgReq) (*vipcfgdto.Updat
 	updated.CommentEffectTitlePt = req.CommentEffectTitlePt
 	updated.CommentEffectTitleHi = req.CommentEffectTitleHi
 	updated.CommentEffectTitleId = req.CommentEffectTitleId
+	updated.CommentEffectTitleAr = req.CommentEffectTitleAr
 	updated.CommentEffectDescEn = req.CommentEffectDescEn
 	updated.CommentEffectDescEs = req.CommentEffectDescEs
 	updated.CommentEffectDescPt = req.CommentEffectDescPt
 	updated.CommentEffectDescHi = req.CommentEffectDescHi
 	updated.CommentEffectDescId = req.CommentEffectDescId
+	updated.CommentEffectDescAr = req.CommentEffectDescAr
 	updated.CustomerServiceIcon = req.CustomerServiceIcon
 	updated.CustomerServiceTitleEn = req.CustomerServiceTitleEn
 	updated.CustomerServiceTitleEs = req.CustomerServiceTitleEs
 	updated.CustomerServiceTitlePt = req.CustomerServiceTitlePt
 	updated.CustomerServiceTitleHi = req.CustomerServiceTitleHi
 	updated.CustomerServiceTitleId = req.CustomerServiceTitleId
+	updated.CustomerServiceTitleAr = req.CustomerServiceTitleAr
 	updated.CustomerServiceDescEn = req.CustomerServiceDescEn
 	updated.CustomerServiceDescEs = req.CustomerServiceDescEs
 	updated.CustomerServiceDescPt = req.CustomerServiceDescPt
 	updated.CustomerServiceDescHi = req.CustomerServiceDescHi
 	updated.CustomerServiceDescId = req.CustomerServiceDescId
+	updated.CustomerServiceDescAr = req.CustomerServiceDescAr
 	if err := cfgdao.UpdateVipCfg(&updated); err != nil {
 		return nil, err
 	}

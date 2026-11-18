@@ -31,22 +31,26 @@ func fillActivityMessageListAssets(list []*activitymessagedto.ActivityMessageLis
 		row.IconPtName = row.IconPt
 		row.IconHiName = row.IconHi
 		row.IconIdName = row.IconId
+		row.IconArName = row.IconAr
 		row.IconEn = upload.GetUrlByName(row.IconEnName)
 		row.IconEs = upload.GetUrlByName(row.IconEsName)
 		row.IconPt = upload.GetUrlByName(row.IconPtName)
 		row.IconHi = upload.GetUrlByName(row.IconHiName)
 		row.IconId = upload.GetUrlByName(row.IconIdName)
+		row.IconAr = upload.GetUrlByName(row.IconArName)
 
 		row.BgEnName = row.BgEn
 		row.BgEsName = row.BgEs
 		row.BgPtName = row.BgPt
 		row.BgHiName = row.BgHi
 		row.BgIdName = row.BgId
+		row.BgArName = row.BgAr
 		row.BgEn = upload.GetUrlByName(row.BgEnName)
 		row.BgEs = upload.GetUrlByName(row.BgEsName)
 		row.BgPt = upload.GetUrlByName(row.BgPtName)
 		row.BgHi = upload.GetUrlByName(row.BgHiName)
 		row.BgId = upload.GetUrlByName(row.BgIdName)
+		row.BgAr = upload.GetUrlByName(row.BgArName)
 	}
 }
 
@@ -57,26 +61,31 @@ func CreateActivityMessage(_ context.Context, req *activitymessagedto.CreateActi
 		IconPt:    req.IconPt,
 		IconHi:    req.IconHi,
 		IconId:    req.IconId,
+		IconAr:    req.IconAr,
 		BgEn:      req.BgEn,
 		BgEs:      req.BgEs,
 		BgPt:      req.BgPt,
 		BgHi:      req.BgHi,
 		BgId:      req.BgId,
+		BgAr:      req.BgAr,
 		TitleEn:   req.TitleEn,
 		TitleEs:   req.TitleEs,
 		TitlePt:   req.TitlePt,
 		TitleHi:   req.TitleHi,
 		TitleId:   req.TitleId,
+		TitleAr:   req.TitleAr,
 		ContentEn: req.ContentEn,
 		ContentEs: req.ContentEs,
 		ContentPt: req.ContentPt,
 		ContentHi: req.ContentHi,
 		ContentId: req.ContentId,
+		ContentAr: req.ContentAr,
 		UrlEn:     req.UrlEn,
 		UrlEs:     req.UrlEs,
 		UrlPt:     req.UrlPt,
 		UrlHi:     req.UrlHi,
 		UrlId:     req.UrlId,
+		UrlAr:     req.UrlAr,
 		Status:    entity.ActivityMessageStatusUnpublished,
 	}
 	if err := messagedao.CreateActivityMessage(row); err != nil {
@@ -95,26 +104,31 @@ func UpdateActivityMessage(_ context.Context, req *activitymessagedto.UpdateActi
 	row.IconPt = req.IconPt
 	row.IconHi = req.IconHi
 	row.IconId = req.IconId
+	row.IconAr = req.IconAr
 	row.BgEn = req.BgEn
 	row.BgEs = req.BgEs
 	row.BgPt = req.BgPt
 	row.BgHi = req.BgHi
 	row.BgId = req.BgId
+	row.BgAr = req.BgAr
 	row.TitleEn = req.TitleEn
 	row.TitleEs = req.TitleEs
 	row.TitlePt = req.TitlePt
 	row.TitleHi = req.TitleHi
 	row.TitleId = req.TitleId
+	row.TitleAr = req.TitleAr
 	row.ContentEn = req.ContentEn
 	row.ContentEs = req.ContentEs
 	row.ContentPt = req.ContentPt
 	row.ContentHi = req.ContentHi
 	row.ContentId = req.ContentId
+	row.ContentAr = req.ContentAr
 	row.UrlEn = req.UrlEn
 	row.UrlEs = req.UrlEs
 	row.UrlPt = req.UrlPt
 	row.UrlHi = req.UrlHi
 	row.UrlId = req.UrlId
+	row.UrlAr = req.UrlAr
 	if err := messagedao.UpdateActivityMessage(row); err != nil {
 		return nil, err
 	}

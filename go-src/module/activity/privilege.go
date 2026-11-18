@@ -27,6 +27,7 @@ func privilegeRowsFromDTO(list []*activitydto.FirstRechargePrivilegeItem) []*act
 			DescPt: item.DescPt,
 			DescHi: item.DescHi,
 			DescId: item.DescId,
+			DescAr: item.DescAr,
 			Sort:   sortVal,
 		})
 	}
@@ -50,6 +51,7 @@ func toPrivilegeDTOItems(list []*activityentity.FirstRechargeActivityPrivilege) 
 			DescPt:   item.DescPt,
 			DescHi:   item.DescHi,
 			DescId:   item.DescId,
+			DescAr:   item.DescAr,
 		})
 	}
 	return out
@@ -71,6 +73,7 @@ func toPrivilegeAppItems(list []*activityentity.FirstRechargeActivityPrivilege) 
 			DescPt: item.DescPt,
 			DescHi: item.DescHi,
 			DescId: item.DescId,
+			DescAr: item.DescAr,
 		})
 	}
 	return out

@@ -14,9 +14,9 @@ import (
 const welcomePersonalMessageParams = ""
 
 type personalSystemMessageDisplay struct {
-	IconEn, IconEs, IconPt, IconHi, IconId                string
-	TitleEn, TitleEs, TitlePt, TitleHi, TitleId           string
-	ContentEn, ContentEs, ContentPt, ContentHi, ContentId string
+	IconEn, IconEs, IconPt, IconHi, IconId, IconAr                string
+	TitleEn, TitleEs, TitlePt, TitleHi, TitleId, TitleAr           string
+	ContentEn, ContentEs, ContentPt, ContentHi, ContentId, ContentAr string
 }
 
 var welcomePersonalMessageContent = personalSystemMessageDisplay{
@@ -25,11 +25,13 @@ var welcomePersonalMessageContent = personalSystemMessageDisplay{
 	TitlePt:   "Bem-vindo",
 	TitleHi:   "स्वागत है",
 	TitleId:   "Selamat datang",
+	TitleAr:   "أهلاً بك",
 	ContentEn: "Welcome! We're glad to have you here.",
 	ContentEs: "¡Bienvenido! Nos alegra tenerte aquí.",
 	ContentPt: "Bem-vindo! Ficamos felizes em ter você aqui.",
 	ContentHi: "आपका स्वागत है! हमें खुशी है कि आप यहाँ हैं।",
 	ContentId: "Selamat datang! Kami senang Anda ada di sini.",
+	ContentAr: "أهلاً بك! يسعدنا وجودك هنا.",
 }
 
 func initWelcomePersonalMessageEvent() {

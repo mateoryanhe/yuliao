@@ -17,11 +17,13 @@ var followAnchorPersonalMessageContent = personalSystemMessageDisplay{
 	TitlePt:   "Novo seguidor",
 	TitleHi:   "नया अनुयायी",
 	TitleId:   "Pengikut baru",
+	TitleAr:   "متابع جديد",
 	ContentEn: followAnchorNicknamePlaceholder + " started following you. Say hello when you go live!",
 	ContentEs: followAnchorNicknamePlaceholder + " comenzó a seguirte. ¡Saluda cuando estés en vivo!",
 	ContentPt: followAnchorNicknamePlaceholder + " começou a seguir você. Dê um oi quando entrar ao vivo!",
 	ContentHi: followAnchorNicknamePlaceholder + " ने आपको फ़ॉलो करना शुरू किया। लाइव आने पर नमस्ते कहें!",
 	ContentId: followAnchorNicknamePlaceholder + " mulai mengikuti Anda. Sapa mereka saat Anda live!",
+	ContentAr: followAnchorNicknamePlaceholder + " بدأ متابعتك. رحّب به عند بدء البث!",
 }
 
 type followAnchorPersonalMessageParams struct {
@@ -66,11 +68,13 @@ func followAnchorPersonalMessageDisplay(row *entity.UserPersonalSystemMessage) p
 	display.ContentPt = strings.ReplaceAll(display.ContentPt, followAnchorNicknamePlaceholder, nickname)
 	display.ContentHi = strings.ReplaceAll(display.ContentHi, followAnchorNicknamePlaceholder, nickname)
 	display.ContentId = strings.ReplaceAll(display.ContentId, followAnchorNicknamePlaceholder, nickname)
+	display.ContentAr = strings.ReplaceAll(display.ContentAr, followAnchorNicknamePlaceholder, nickname)
 	display.IconEn = avatarName
 	display.IconEs = avatarName
 	display.IconPt = avatarName
 	display.IconHi = avatarName
 	display.IconId = avatarName
+	display.IconAr = avatarName
 	return display
 }
 

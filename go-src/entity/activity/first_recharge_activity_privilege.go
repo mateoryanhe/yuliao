@@ -18,6 +18,7 @@ type FirstRechargeActivityPrivilege struct {
 	DescPt string `gorm:"size:255;default:'';comment:特权描述(葡萄牙语)" json:"descPt"`
 	DescHi string `gorm:"size:255;default:'';comment:特权描述(印地语)" json:"descHi"`
 	DescId string `gorm:"size:255;default:'';comment:特权描述(印尼语)" json:"descId"`
+	DescAr string `gorm:"size:255;default:'';comment:特权描述(阿拉伯语)" json:"descAr"`
 	Sort   int    `gorm:"default:0;comment:排序值(越小越靠前)" json:"sort"`
 }
 

@@ -14,6 +14,7 @@ type FirstRechargePrivilegeItem struct {
 	DescPt   string `json:"descPt"`
 	DescHi   string `json:"descHi"`
 	DescId   string `json:"descId"`
+	DescAr   string `json:"descAr"`
 }
 
 type FirstRechargeActivityCfgItem struct {
@@ -26,11 +27,13 @@ type FirstRechargeActivityCfgItem struct {
 	TitlePt           string                        `json:"titlePt"`
 	TitleHi           string                        `json:"titleHi"`
 	TitleId           string                        `json:"titleId"`
+	TitleAr           string                        `json:"titleAr"`
 	RechargeBtnTextEn string                        `json:"rechargeBtnTextEn"`
 	RechargeBtnTextEs string                        `json:"rechargeBtnTextEs"`
 	RechargeBtnTextPt string                        `json:"rechargeBtnTextPt"`
 	RechargeBtnTextHi string                        `json:"rechargeBtnTextHi"`
 	RechargeBtnTextId string                        `json:"rechargeBtnTextId"`
+	RechargeBtnTextAr string                        `json:"rechargeBtnTextAr"`
 	FirstRechargeRatio float64                      `json:"firstRechargeRatio"`
 	Privileges        []*FirstRechargePrivilegeItem `json:"privileges"`
 	CreatedAt         string                        `json:"createdAt"`
@@ -51,11 +54,13 @@ type SaveFirstRechargeActivityCfgReq struct {
 	TitlePt           string                        `json:"titlePt"`
 	TitleHi           string                        `json:"titleHi"`
 	TitleId           string                        `json:"titleId"`
+	TitleAr           string                        `json:"titleAr"`
 	RechargeBtnTextEn string                        `json:"rechargeBtnTextEn"`
 	RechargeBtnTextEs string                        `json:"rechargeBtnTextEs"`
 	RechargeBtnTextPt string                        `json:"rechargeBtnTextPt"`
 	RechargeBtnTextHi string                        `json:"rechargeBtnTextHi"`
 	RechargeBtnTextId string                        `json:"rechargeBtnTextId"`
+	RechargeBtnTextAr string                        `json:"rechargeBtnTextAr"`
 	FirstRechargeRatio float64                      `json:"firstRechargeRatio"`
 	Privileges        []*FirstRechargePrivilegeItem `json:"privileges"`
 }
@@ -72,6 +77,7 @@ type AppFirstRechargePrivilegeItem struct {
 	DescPt string `json:"descPt" dc:"特权描述(葡萄牙语)"`
 	DescHi string `json:"descHi" dc:"特权描述(印地语)"`
 	DescId string `json:"descId" dc:"特权描述(印尼语)"`
+	DescAr string `json:"descAr" dc:"特权描述(阿拉伯语)"`
 }
 
 type AppFirstRechargeActivityCfgReq struct {
@@ -79,7 +85,7 @@ type AppFirstRechargeActivityCfgReq struct {
 }
 
 // AppFirstRechargeActivityCfgRes App端首充活动配置
-// enabled=false 时建议隐藏活动入口; 文案按客户端语言从 En/Es/Pt/Hi/Id 字段取值
+// enabled=false 时建议隐藏活动入口; 文案按客户端语言从 En/Es/Pt/Hi/Id/Ar 字段取值
 // FirstRechargeSuccessPushItem 首充成功推送载荷
 type FirstRechargeSuccessPushItem struct {
 	FirstRecharge bool   `json:"firstRecharge" dc:"false=已首充,客户端隐藏首充入口"`
@@ -96,11 +102,13 @@ type AppFirstRechargeActivityCfgRes struct {
 	TitlePt           string                           `json:"titlePt" dc:"活动标题(葡萄牙语)"`
 	TitleHi           string                           `json:"titleHi" dc:"活动标题(印地语)"`
 	TitleId           string                           `json:"titleId" dc:"活动标题(印尼语)"`
+	TitleAr           string                           `json:"titleAr" dc:"活动标题(阿拉伯语)"`
 	RechargeBtnTextEn string                           `json:"rechargeBtnTextEn" dc:"充值按钮文案(英文)"`
 	RechargeBtnTextEs string                           `json:"rechargeBtnTextEs" dc:"充值按钮文案(西班牙语)"`
 	RechargeBtnTextPt string                           `json:"rechargeBtnTextPt" dc:"充值按钮文案(葡萄牙语)"`
 	RechargeBtnTextHi string                           `json:"rechargeBtnTextHi" dc:"充值按钮文案(印地语)"`
 	RechargeBtnTextId string                           `json:"rechargeBtnTextId" dc:"充值按钮文案(印尼语)"`
+	RechargeBtnTextAr string                           `json:"rechargeBtnTextAr" dc:"充值按钮文案(阿拉伯语)"`
 	FirstRechargeRatio float64                         `json:"firstRechargeRatio" dc:"首充比例(%)"`
 	Privileges        []*AppFirstRechargePrivilegeItem `json:"privileges" dc:"特权列表(按CMS配置顺序),icon为CDN URL,描述按语言取值"`
 }

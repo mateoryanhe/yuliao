@@ -19,11 +19,13 @@ type FirstRechargeActivityCfg struct {
 	TitlePt           string `gorm:"size:128;default:'';comment:标题(葡萄牙语)" json:"titlePt"`
 	TitleHi           string `gorm:"size:128;default:'';comment:标题(印地语)" json:"titleHi"`
 	TitleId           string `gorm:"size:128;default:'';comment:标题(印尼语)" json:"titleId"`
+	TitleAr           string `gorm:"size:128;default:'';comment:标题(阿拉伯语)" json:"titleAr"`
 	RechargeBtnTextEn string `gorm:"size:64;default:'';comment:充值按钮文案(英文)" json:"rechargeBtnTextEn"`
 	RechargeBtnTextEs string `gorm:"size:64;default:'';comment:充值按钮文案(西班牙语)" json:"rechargeBtnTextEs"`
 	RechargeBtnTextPt string `gorm:"size:64;default:'';comment:充值按钮文案(葡萄牙语)" json:"rechargeBtnTextPt"`
 	RechargeBtnTextHi string  `gorm:"size:64;default:'';comment:充值按钮文案(印地语)" json:"rechargeBtnTextHi"`
 	RechargeBtnTextId string  `gorm:"size:64;default:'';comment:充值按钮文案(印尼语)" json:"rechargeBtnTextId"`
+	RechargeBtnTextAr string  `gorm:"size:64;default:'';comment:充值按钮文案(阿拉伯语)" json:"rechargeBtnTextAr"`
 	FirstRechargeRatio float64 `gorm:"type:decimal(6,2);default:20;comment:首充比例(%)" json:"firstRechargeRatio"`
 }
 

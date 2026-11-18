@@ -25,11 +25,13 @@ func SaveFirstRechargeActivityCfg(_ context.Context, req *activitydto.SaveFirstR
 		TitlePt:           req.TitlePt,
 		TitleHi:           req.TitleHi,
 		TitleId:           req.TitleId,
+		TitleAr:           req.TitleAr,
 		RechargeBtnTextEn: req.RechargeBtnTextEn,
 		RechargeBtnTextEs: req.RechargeBtnTextEs,
 		RechargeBtnTextPt: req.RechargeBtnTextPt,
 		RechargeBtnTextHi: req.RechargeBtnTextHi,
 		RechargeBtnTextId: req.RechargeBtnTextId,
+		RechargeBtnTextAr: req.RechargeBtnTextAr,
 		FirstRechargeRatio: normalizeFirstRechargeRatio(req.FirstRechargeRatio),
 	}
 	if req.ID > 0 {

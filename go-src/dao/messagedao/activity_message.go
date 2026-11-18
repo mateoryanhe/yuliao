@@ -96,11 +96,11 @@ func ReloadActivityMessageCaches() {
 
 func GetActivityMessageList(req *activitymessagedto.ActivityMessageListReq) (int, []*activitymessagedto.ActivityMessageListRes) {
 	sql := `select id,
-                   icon_en, icon_es, icon_pt, icon_hi,
-                   bg_en, bg_es, bg_pt, bg_hi,
-                   title_en, title_es, title_pt, title_hi,
-                   content_en, content_es, content_pt, content_hi,
-                   url_en, url_es, url_pt, url_hi,
+                   icon_en, icon_es, icon_pt, icon_hi, icon_id, icon_ar,
+                   bg_en, bg_es, bg_pt, bg_hi, bg_id, bg_ar,
+                   title_en, title_es, title_pt, title_hi, title_id, title_ar,
+                   content_en, content_es, content_pt, content_hi, content_id, content_ar,
+                   url_en, url_es, url_pt, url_hi, url_id, url_ar,
                    status, published_at, created_at, updated_at
             from activity_messages
             where 1=1 `

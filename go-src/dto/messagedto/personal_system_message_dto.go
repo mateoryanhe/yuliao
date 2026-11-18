@@ -17,16 +17,19 @@ type AppPersonalSystemMessageItem struct {
 	IconPt        string `json:"iconPt" dc:"图标URL(葡萄牙语)"`
 	IconHi        string `json:"iconHi" dc:"图标URL(印地语)"`
 	IconId        string `json:"iconId" dc:"图标URL(印尼语)"`
+	IconAr        string `json:"iconAr" dc:"图标URL(阿拉伯语)"`
 	TitleEn       string `json:"titleEn" dc:"标题(英文)"`
 	TitleEs       string `json:"titleEs" dc:"标题(西班牙语)"`
 	TitlePt       string `json:"titlePt" dc:"标题(葡萄牙语)"`
 	TitleHi       string `json:"titleHi" dc:"标题(印地语)"`
 	TitleId       string `json:"titleId" dc:"标题(印尼语)"`
+	TitleAr       string `json:"titleAr" dc:"标题(阿拉伯语)"`
 	ContentEn     string `json:"contentEn" dc:"内容(英文)"`
 	ContentEs     string `json:"contentEs" dc:"内容(西班牙语)"`
 	ContentPt     string `json:"contentPt" dc:"内容(葡萄牙语)"`
 	ContentHi     string `json:"contentHi" dc:"内容(印地语)"`
 	ContentId     string `json:"contentId" dc:"内容(印尼语)"`
+	ContentAr     string `json:"contentAr" dc:"内容(阿拉伯语)"`
 	CreatedAt     string `json:"createdAt" dc:"创建时间"`
 }
 

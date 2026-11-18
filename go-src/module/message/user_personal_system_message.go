@@ -69,16 +69,19 @@ func toAppPersonalSystemMessageItem(row *entity.UserPersonalSystemMessage) *mess
 		item.IconPt = upload.GetUrlByName(display.IconPt)
 		item.IconHi = upload.GetUrlByName(display.IconHi)
 		item.IconId = upload.GetUrlByName(display.IconId)
+		item.IconAr = upload.GetUrlByName(display.IconAr)
 		item.TitleEn = display.TitleEn
 		item.TitleEs = display.TitleEs
 		item.TitlePt = display.TitlePt
 		item.TitleHi = display.TitleHi
 		item.TitleId = display.TitleId
+		item.TitleAr = display.TitleAr
 		item.ContentEn = display.ContentEn
 		item.ContentEs = display.ContentEs
 		item.ContentPt = display.ContentPt
 		item.ContentHi = display.ContentHi
 		item.ContentId = display.ContentId
+		item.ContentAr = display.ContentAr
 	}
 	if row.MessageTypeId == entity.PersonalSystemMessageTypeFollowAnchor {
 		avatarURL := followAnchorFollowerAvatarURL(row)
@@ -89,6 +92,7 @@ func toAppPersonalSystemMessageItem(row *entity.UserPersonalSystemMessage) *mess
 			item.IconPt = avatarURL
 			item.IconHi = avatarURL
 			item.IconId = avatarURL
+			item.IconAr = avatarURL
 		}
 	}
 	return item

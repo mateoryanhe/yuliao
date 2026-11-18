@@ -3,7 +3,7 @@ package errercode
 import "xr-game-server/constants/lang"
 
 // codeTextMap 错误码的多语言文案表
-// 语言: zh-CN / en / es / pt / hi / id(见 text_id.go) / zh-TW; es/pt/hi 初值由 text_lang_init 自 en 复制
+// 语言: zh-CN / en / es / pt / hi / id(见 text_id.go) / ar(见 text_ar.go) / zh-TW; es/pt/hi 初值由 text_lang_init 自 en 复制
 // 新增/调整错误码时: 至少维护 en + zh-CN(+ zh-TW); id 在 text_id.go; es/pt/hi 需重跑服务或同步 en 副本
 var codeTextMap = map[lang.Lang]map[XRCode]string{
 	lang.LangEN: {

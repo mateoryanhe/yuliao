@@ -29,11 +29,13 @@ type VipCfg struct {
 	AnimationTitlePt       string  `gorm:"size:128;default:'';comment:进场特效标题(葡萄牙语)" json:"animationTitlePt"`
 	AnimationTitleHi       string  `gorm:"size:128;default:'';comment:进场特效标题(印地语)" json:"animationTitleHi"`
 	AnimationTitleId       string  `gorm:"size:128;default:'';comment:进场特效标题(印尼语)" json:"animationTitleId"`
+	AnimationTitleAr       string  `gorm:"size:128;default:'';comment:进场特效标题(阿拉伯语)" json:"animationTitleAr"`
 	AnimationDescEn        string  `gorm:"type:text;comment:进场特效说明(英文)" json:"animationDescEn"`
 	AnimationDescEs        string  `gorm:"type:text;comment:进场特效说明(西班牙语)" json:"animationDescEs"`
 	AnimationDescPt        string  `gorm:"type:text;comment:进场特效说明(葡萄牙语)" json:"animationDescPt"`
 	AnimationDescHi        string  `gorm:"type:text;comment:进场特效说明(印地语)" json:"animationDescHi"`
 	AnimationDescId        string  `gorm:"type:text;comment:进场特效说明(印尼语)" json:"animationDescId"`
+	AnimationDescAr        string  `gorm:"type:text;comment:进场特效说明(阿拉伯语)" json:"animationDescAr"`
 	CommentEffectSwitch    uint8   `gorm:"default:0;comment:公屏评论特效开关(0关,1开,仅App端使用)" json:"commentEffectSwitch"`
 	CommentEffect          string  `gorm:"size:255;default:'';comment:公屏评论特效动画资源文件名" json:"commentEffect"`
 	CommentEffectIcon      string  `gorm:"size:255;default:'';comment:公屏评论特效图标资源文件名" json:"commentEffectIcon"`
@@ -42,11 +44,13 @@ type VipCfg struct {
 	CommentEffectTitlePt   string  `gorm:"size:128;default:'';comment:公屏评论特效标题(葡萄牙语)" json:"commentEffectTitlePt"`
 	CommentEffectTitleHi   string  `gorm:"size:128;default:'';comment:公屏评论特效标题(印地语)" json:"commentEffectTitleHi"`
 	CommentEffectTitleId   string  `gorm:"size:128;default:'';comment:公屏评论特效标题(印尼语)" json:"commentEffectTitleId"`
+	CommentEffectTitleAr   string  `gorm:"size:128;default:'';comment:公屏评论特效标题(阿拉伯语)" json:"commentEffectTitleAr"`
 	CommentEffectDescEn    string  `gorm:"type:text;comment:公屏评论特效说明(英文)" json:"commentEffectDescEn"`
 	CommentEffectDescEs    string  `gorm:"type:text;comment:公屏评论特效说明(西班牙语)" json:"commentEffectDescEs"`
 	CommentEffectDescPt    string  `gorm:"type:text;comment:公屏评论特效说明(葡萄牙语)" json:"commentEffectDescPt"`
 	CommentEffectDescHi    string  `gorm:"type:text;comment:公屏评论特效说明(印地语)" json:"commentEffectDescHi"`
 	CommentEffectDescId    string  `gorm:"type:text;comment:公屏评论特效说明(印尼语)" json:"commentEffectDescId"`
+	CommentEffectDescAr    string  `gorm:"type:text;comment:公屏评论特效说明(阿拉伯语)" json:"commentEffectDescAr"`
 	CustomerServiceSwitch  uint8   `gorm:"default:0;comment:客服优先开关(0关,1开,仅App端使用)" json:"customerServiceSwitch"`
 	CustomerServiceIcon    string  `gorm:"size:255;default:'';comment:客服优先图标资源文件名" json:"customerServiceIcon"`
 	CustomerServiceTitleEn string  `gorm:"size:128;default:'';comment:客服优先标题(英文)" json:"customerServiceTitleEn"`
@@ -54,11 +58,13 @@ type VipCfg struct {
 	CustomerServiceTitlePt string  `gorm:"size:128;default:'';comment:客服优先标题(葡萄牙语)" json:"customerServiceTitlePt"`
 	CustomerServiceTitleHi string  `gorm:"size:128;default:'';comment:客服优先标题(印地语)" json:"customerServiceTitleHi"`
 	CustomerServiceTitleId string  `gorm:"size:128;default:'';comment:客服优先标题(印尼语)" json:"customerServiceTitleId"`
+	CustomerServiceTitleAr string  `gorm:"size:128;default:'';comment:客服优先标题(阿拉伯语)" json:"customerServiceTitleAr"`
 	CustomerServiceDescEn  string  `gorm:"type:text;comment:客服优先说明(英文)" json:"customerServiceDescEn"`
 	CustomerServiceDescEs  string  `gorm:"type:text;comment:客服优先说明(西班牙语)" json:"customerServiceDescEs"`
 	CustomerServiceDescPt  string  `gorm:"type:text;comment:客服优先说明(葡萄牙语)" json:"customerServiceDescPt"`
 	CustomerServiceDescHi  string  `gorm:"type:text;comment:客服优先说明(印地语)" json:"customerServiceDescHi"`
 	CustomerServiceDescId  string  `gorm:"type:text;comment:客服优先说明(印尼语)" json:"customerServiceDescId"`
+	CustomerServiceDescAr  string  `gorm:"type:text;comment:客服优先说明(阿拉伯语)" json:"customerServiceDescAr"`
 }
 
 func initVipCfg() {

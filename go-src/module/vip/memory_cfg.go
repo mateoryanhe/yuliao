@@ -163,11 +163,13 @@ func toVipCfgListRes(row *liveentity.VipCfg) *vipcfgdto.VipCfgListRes {
 		AnimationTitlePt:        row.AnimationTitlePt,
 		AnimationTitleHi:        row.AnimationTitleHi,
 		AnimationTitleId:        row.AnimationTitleId,
+		AnimationTitleAr:        row.AnimationTitleAr,
 		AnimationDescEn:         row.AnimationDescEn,
 		AnimationDescEs:         row.AnimationDescEs,
 		AnimationDescPt:         row.AnimationDescPt,
 		AnimationDescHi:         row.AnimationDescHi,
 		AnimationDescId:         row.AnimationDescId,
+		AnimationDescAr:         row.AnimationDescAr,
 		CommentEffectName:       row.CommentEffect,
 		CommentEffect:           upload.GetUrlByName(row.CommentEffect),
 		CommentEffectIconName:   row.CommentEffectIcon,
@@ -177,11 +179,13 @@ func toVipCfgListRes(row *liveentity.VipCfg) *vipcfgdto.VipCfgListRes {
 		CommentEffectTitlePt:    row.CommentEffectTitlePt,
 		CommentEffectTitleHi:    row.CommentEffectTitleHi,
 		CommentEffectTitleId:    row.CommentEffectTitleId,
+		CommentEffectTitleAr:    row.CommentEffectTitleAr,
 		CommentEffectDescEn:     row.CommentEffectDescEn,
 		CommentEffectDescEs:     row.CommentEffectDescEs,
 		CommentEffectDescPt:     row.CommentEffectDescPt,
 		CommentEffectDescHi:     row.CommentEffectDescHi,
 		CommentEffectDescId:     row.CommentEffectDescId,
+		CommentEffectDescAr:     row.CommentEffectDescAr,
 		CustomerServiceIconName: row.CustomerServiceIcon,
 		CustomerServiceIcon:     upload.GetUrlByName(row.CustomerServiceIcon),
 		CustomerServiceTitleEn:  row.CustomerServiceTitleEn,
@@ -189,11 +193,13 @@ func toVipCfgListRes(row *liveentity.VipCfg) *vipcfgdto.VipCfgListRes {
 		CustomerServiceTitlePt:  row.CustomerServiceTitlePt,
 		CustomerServiceTitleHi:  row.CustomerServiceTitleHi,
 		CustomerServiceTitleId:  row.CustomerServiceTitleId,
+		CustomerServiceTitleAr:  row.CustomerServiceTitleAr,
 		CustomerServiceDescEn:   row.CustomerServiceDescEn,
 		CustomerServiceDescEs:   row.CustomerServiceDescEs,
 		CustomerServiceDescPt:   row.CustomerServiceDescPt,
 		CustomerServiceDescHi:   row.CustomerServiceDescHi,
 		CustomerServiceDescId:   row.CustomerServiceDescId,
+		CustomerServiceDescAr:   row.CustomerServiceDescAr,
 		CreatedAt:               formatVipCfgTime(row.CreatedAt),
 		UpdatedAt:               formatVipCfgTime(row.UpdatedAt),
 	}
@@ -237,8 +243,8 @@ func buildAppVipPrivilegeList(row *liveentity.VipCfg) []*vipcfgdto.AppVipPrivile
 		list = append(list, &vipcfgdto.AppVipPrivilegeItem{
 			PrivilegeType: vipcfgdto.AppVipPrivilegeTypeEntryEffect,
 			Icon:          upload.GetUrlByName(row.AnimationIcon),
-			Title:         appVipPrivilegeI18nText(row.AnimationTitleEn, row.AnimationTitleEs, row.AnimationTitlePt, row.AnimationTitleHi, row.AnimationTitleId),
-			Desc:          appVipPrivilegeI18nText(row.AnimationDescEn, row.AnimationDescEs, row.AnimationDescPt, row.AnimationDescHi, row.AnimationDescId),
+			Title:         appVipPrivilegeI18nText(row.AnimationTitleEn, row.AnimationTitleEs, row.AnimationTitlePt, row.AnimationTitleHi, row.AnimationTitleId, row.AnimationTitleAr),
+			Desc:          appVipPrivilegeI18nText(row.AnimationDescEn, row.AnimationDescEs, row.AnimationDescPt, row.AnimationDescHi, row.AnimationDescId, row.AnimationDescAr),
 			Animation:     upload.GetUrlByName(row.Animation),
 		})
 	}
@@ -246,8 +252,8 @@ func buildAppVipPrivilegeList(row *liveentity.VipCfg) []*vipcfgdto.AppVipPrivile
 		list = append(list, &vipcfgdto.AppVipPrivilegeItem{
 			PrivilegeType: vipcfgdto.AppVipPrivilegeTypeCommentEffect,
 			Icon:          upload.GetUrlByName(row.CommentEffectIcon),
-			Title:         appVipPrivilegeI18nText(row.CommentEffectTitleEn, row.CommentEffectTitleEs, row.CommentEffectTitlePt, row.CommentEffectTitleHi, row.CommentEffectTitleId),
-			Desc:          appVipPrivilegeI18nText(row.CommentEffectDescEn, row.CommentEffectDescEs, row.CommentEffectDescPt, row.CommentEffectDescHi, row.CommentEffectDescId),
+			Title:         appVipPrivilegeI18nText(row.CommentEffectTitleEn, row.CommentEffectTitleEs, row.CommentEffectTitlePt, row.CommentEffectTitleHi, row.CommentEffectTitleId, row.CommentEffectTitleAr),
+			Desc:          appVipPrivilegeI18nText(row.CommentEffectDescEn, row.CommentEffectDescEs, row.CommentEffectDescPt, row.CommentEffectDescHi, row.CommentEffectDescId, row.CommentEffectDescAr),
 			Animation:     upload.GetUrlByName(row.CommentEffect),
 		})
 	}
@@ -255,20 +261,21 @@ func buildAppVipPrivilegeList(row *liveentity.VipCfg) []*vipcfgdto.AppVipPrivile
 		list = append(list, &vipcfgdto.AppVipPrivilegeItem{
 			PrivilegeType: vipcfgdto.AppVipPrivilegeTypeCustomerService,
 			Icon:          upload.GetUrlByName(row.CustomerServiceIcon),
-			Title:         appVipPrivilegeI18nText(row.CustomerServiceTitleEn, row.CustomerServiceTitleEs, row.CustomerServiceTitlePt, row.CustomerServiceTitleHi, row.CustomerServiceTitleId),
-			Desc:          appVipPrivilegeI18nText(row.CustomerServiceDescEn, row.CustomerServiceDescEs, row.CustomerServiceDescPt, row.CustomerServiceDescHi, row.CustomerServiceDescId),
+			Title:         appVipPrivilegeI18nText(row.CustomerServiceTitleEn, row.CustomerServiceTitleEs, row.CustomerServiceTitlePt, row.CustomerServiceTitleHi, row.CustomerServiceTitleId, row.CustomerServiceTitleAr),
+			Desc:          appVipPrivilegeI18nText(row.CustomerServiceDescEn, row.CustomerServiceDescEs, row.CustomerServiceDescPt, row.CustomerServiceDescHi, row.CustomerServiceDescId, row.CustomerServiceDescAr),
 		})
 	}
 	return list
 }
 
-func appVipPrivilegeI18nText(en, es, pt, hi, id string) vipcfgdto.AppVipPrivilegeI18nText {
+func appVipPrivilegeI18nText(en, es, pt, hi, id, ar string) vipcfgdto.AppVipPrivilegeI18nText {
 	return vipcfgdto.AppVipPrivilegeI18nText{
 		En: en,
 		Es: es,
 		Pt: pt,
 		Hi: hi,
 		Id: id,
+		Ar: ar,
 	}
 }
 

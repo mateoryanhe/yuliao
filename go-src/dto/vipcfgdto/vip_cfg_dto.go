@@ -32,11 +32,13 @@ type VipCfgListRes struct {
 	AnimationTitlePt        string  `json:"animationTitlePt" dc:"进场特效标题(葡萄牙语)"`
 	AnimationTitleHi        string  `json:"animationTitleHi" dc:"进场特效标题(印地语)"`
 	AnimationTitleId        string  `json:"animationTitleId" dc:"进场特效标题(印尼语)"`
+	AnimationTitleAr        string  `json:"animationTitleAr" dc:"进场特效标题(阿拉伯语)"`
 	AnimationDescEn         string  `json:"animationDescEn" dc:"进场特效说明(英文)"`
 	AnimationDescEs         string  `json:"animationDescEs" dc:"进场特效说明(西班牙语)"`
 	AnimationDescPt         string  `json:"animationDescPt" dc:"进场特效说明(葡萄牙语)"`
 	AnimationDescHi         string  `json:"animationDescHi" dc:"进场特效说明(印地语)"`
 	AnimationDescId         string  `json:"animationDescId" dc:"进场特效说明(印尼语)"`
+	AnimationDescAr         string  `json:"animationDescAr" dc:"进场特效说明(阿拉伯语)"`
 	CommentEffect           string  `json:"commentEffect" dc:"公屏评论特效动画完整URL(列表展示)"`
 	CommentEffectName       string  `json:"commentEffectName" dc:"公屏评论特效动画资源文件名(编辑保存用)"`
 	CommentEffectIcon       string  `json:"commentEffectIcon" dc:"公屏评论特效图标完整URL(列表展示)"`
@@ -46,11 +48,13 @@ type VipCfgListRes struct {
 	CommentEffectTitlePt    string  `json:"commentEffectTitlePt" dc:"公屏评论特效标题(葡萄牙语)"`
 	CommentEffectTitleHi    string  `json:"commentEffectTitleHi" dc:"公屏评论特效标题(印地语)"`
 	CommentEffectTitleId    string  `json:"commentEffectTitleId" dc:"公屏评论特效标题(印尼语)"`
+	CommentEffectTitleAr    string  `json:"commentEffectTitleAr" dc:"公屏评论特效标题(阿拉伯语)"`
 	CommentEffectDescEn     string  `json:"commentEffectDescEn" dc:"公屏评论特效说明(英文)"`
 	CommentEffectDescEs     string  `json:"commentEffectDescEs" dc:"公屏评论特效说明(西班牙语)"`
 	CommentEffectDescPt     string  `json:"commentEffectDescPt" dc:"公屏评论特效说明(葡萄牙语)"`
 	CommentEffectDescHi     string  `json:"commentEffectDescHi" dc:"公屏评论特效说明(印地语)"`
 	CommentEffectDescId     string  `json:"commentEffectDescId" dc:"公屏评论特效说明(印尼语)"`
+	CommentEffectDescAr     string  `json:"commentEffectDescAr" dc:"公屏评论特效说明(阿拉伯语)"`
 	CustomerServiceIcon     string  `json:"customerServiceIcon" dc:"客服优先图标完整URL(列表展示)"`
 	CustomerServiceIconName string  `json:"customerServiceIconName" dc:"客服优先图标资源文件名(编辑保存用)"`
 	CustomerServiceTitleEn  string  `json:"customerServiceTitleEn" dc:"客服优先标题(英文)"`
@@ -58,11 +62,13 @@ type VipCfgListRes struct {
 	CustomerServiceTitlePt  string  `json:"customerServiceTitlePt" dc:"客服优先标题(葡萄牙语)"`
 	CustomerServiceTitleHi  string  `json:"customerServiceTitleHi" dc:"客服优先标题(印地语)"`
 	CustomerServiceTitleId  string  `json:"customerServiceTitleId" dc:"客服优先标题(印尼语)"`
+	CustomerServiceTitleAr  string  `json:"customerServiceTitleAr" dc:"客服优先标题(阿拉伯语)"`
 	CustomerServiceDescEn   string  `json:"customerServiceDescEn" dc:"客服优先说明(英文)"`
 	CustomerServiceDescEs   string  `json:"customerServiceDescEs" dc:"客服优先说明(西班牙语)"`
 	CustomerServiceDescPt   string  `json:"customerServiceDescPt" dc:"客服优先说明(葡萄牙语)"`
 	CustomerServiceDescHi   string  `json:"customerServiceDescHi" dc:"客服优先说明(印地语)"`
 	CustomerServiceDescId   string  `json:"customerServiceDescId" dc:"客服优先说明(印尼语)"`
+	CustomerServiceDescAr   string  `json:"customerServiceDescAr" dc:"客服优先说明(阿拉伯语)"`
 	CreatedAt               string  `json:"createdAt"`
 	UpdatedAt               string  `json:"updatedAt"`
 }
@@ -84,11 +90,13 @@ type CreateVipCfgReq struct {
 	AnimationTitlePt       string  `json:"animationTitlePt" dc:"进场特效标题(葡萄牙语)"`
 	AnimationTitleHi       string  `json:"animationTitleHi" dc:"进场特效标题(印地语)"`
 	AnimationTitleId       string  `json:"animationTitleId" dc:"进场特效标题(印尼语)"`
+	AnimationTitleAr       string  `json:"animationTitleAr" dc:"进场特效标题(阿拉伯语)"`
 	AnimationDescEn        string  `json:"animationDescEn" dc:"进场特效说明(英文)"`
 	AnimationDescEs        string  `json:"animationDescEs" dc:"进场特效说明(西班牙语)"`
 	AnimationDescPt        string  `json:"animationDescPt" dc:"进场特效说明(葡萄牙语)"`
 	AnimationDescHi        string  `json:"animationDescHi" dc:"进场特效说明(印地语)"`
 	AnimationDescId        string  `json:"animationDescId" dc:"进场特效说明(印尼语)"`
+	AnimationDescAr        string  `json:"animationDescAr" dc:"进场特效说明(阿拉伯语)"`
 	CommentEffect          string  `json:"commentEffect" dc:"公屏评论特效动画资源文件名(mp4)"`
 	CommentEffectIcon      string  `json:"commentEffectIcon" dc:"公屏评论特效图标资源文件名"`
 	CommentEffectTitleEn   string  `json:"commentEffectTitleEn" dc:"公屏评论特效标题(英文)"`
@@ -96,22 +104,26 @@ type CreateVipCfgReq struct {
 	CommentEffectTitlePt   string  `json:"commentEffectTitlePt" dc:"公屏评论特效标题(葡萄牙语)"`
 	CommentEffectTitleHi   string  `json:"commentEffectTitleHi" dc:"公屏评论特效标题(印地语)"`
 	CommentEffectTitleId   string  `json:"commentEffectTitleId" dc:"公屏评论特效标题(印尼语)"`
+	CommentEffectTitleAr   string  `json:"commentEffectTitleAr" dc:"公屏评论特效标题(阿拉伯语)"`
 	CommentEffectDescEn    string  `json:"commentEffectDescEn" dc:"公屏评论特效说明(英文)"`
 	CommentEffectDescEs    string  `json:"commentEffectDescEs" dc:"公屏评论特效说明(西班牙语)"`
 	CommentEffectDescPt    string  `json:"commentEffectDescPt" dc:"公屏评论特效说明(葡萄牙语)"`
 	CommentEffectDescHi    string  `json:"commentEffectDescHi" dc:"公屏评论特效说明(印地语)"`
 	CommentEffectDescId    string  `json:"commentEffectDescId" dc:"公屏评论特效说明(印尼语)"`
+	CommentEffectDescAr    string  `json:"commentEffectDescAr" dc:"公屏评论特效说明(阿拉伯语)"`
 	CustomerServiceIcon    string  `json:"customerServiceIcon" dc:"客服优先图标资源文件名"`
 	CustomerServiceTitleEn string  `json:"customerServiceTitleEn" dc:"客服优先标题(英文)"`
 	CustomerServiceTitleEs string  `json:"customerServiceTitleEs" dc:"客服优先标题(西班牙语)"`
 	CustomerServiceTitlePt string  `json:"customerServiceTitlePt" dc:"客服优先标题(葡萄牙语)"`
 	CustomerServiceTitleHi string  `json:"customerServiceTitleHi" dc:"客服优先标题(印地语)"`
 	CustomerServiceTitleId string  `json:"customerServiceTitleId" dc:"客服优先标题(印尼语)"`
+	CustomerServiceTitleAr string  `json:"customerServiceTitleAr" dc:"客服优先标题(阿拉伯语)"`
 	CustomerServiceDescEn  string  `json:"customerServiceDescEn" dc:"客服优先说明(英文)"`
 	CustomerServiceDescEs  string  `json:"customerServiceDescEs" dc:"客服优先说明(西班牙语)"`
 	CustomerServiceDescPt  string  `json:"customerServiceDescPt" dc:"客服优先说明(葡萄牙语)"`
 	CustomerServiceDescHi  string  `json:"customerServiceDescHi" dc:"客服优先说明(印地语)"`
 	CustomerServiceDescId  string  `json:"customerServiceDescId" dc:"客服优先说明(印尼语)"`
+	CustomerServiceDescAr  string  `json:"customerServiceDescAr" dc:"客服优先说明(阿拉伯语)"`
 }
 
 type CreateVipCfgRes struct {
@@ -136,11 +148,13 @@ type UpdateVipCfgReq struct {
 	AnimationTitlePt       string  `json:"animationTitlePt" dc:"进场特效标题(葡萄牙语)"`
 	AnimationTitleHi       string  `json:"animationTitleHi" dc:"进场特效标题(印地语)"`
 	AnimationTitleId       string  `json:"animationTitleId" dc:"进场特效标题(印尼语)"`
+	AnimationTitleAr       string  `json:"animationTitleAr" dc:"进场特效标题(阿拉伯语)"`
 	AnimationDescEn        string  `json:"animationDescEn" dc:"进场特效说明(英文)"`
 	AnimationDescEs        string  `json:"animationDescEs" dc:"进场特效说明(西班牙语)"`
 	AnimationDescPt        string  `json:"animationDescPt" dc:"进场特效说明(葡萄牙语)"`
 	AnimationDescHi        string  `json:"animationDescHi" dc:"进场特效说明(印地语)"`
 	AnimationDescId        string  `json:"animationDescId" dc:"进场特效说明(印尼语)"`
+	AnimationDescAr        string  `json:"animationDescAr" dc:"进场特效说明(阿拉伯语)"`
 	CommentEffect          string  `json:"commentEffect" dc:"公屏评论特效动画资源文件名(mp4)"`
 	CommentEffectIcon      string  `json:"commentEffectIcon" dc:"公屏评论特效图标资源文件名"`
 	CommentEffectTitleEn   string  `json:"commentEffectTitleEn" dc:"公屏评论特效标题(英文)"`
@@ -148,22 +162,26 @@ type UpdateVipCfgReq struct {
 	CommentEffectTitlePt   string  `json:"commentEffectTitlePt" dc:"公屏评论特效标题(葡萄牙语)"`
 	CommentEffectTitleHi   string  `json:"commentEffectTitleHi" dc:"公屏评论特效标题(印地语)"`
 	CommentEffectTitleId   string  `json:"commentEffectTitleId" dc:"公屏评论特效标题(印尼语)"`
+	CommentEffectTitleAr   string  `json:"commentEffectTitleAr" dc:"公屏评论特效标题(阿拉伯语)"`
 	CommentEffectDescEn    string  `json:"commentEffectDescEn" dc:"公屏评论特效说明(英文)"`
 	CommentEffectDescEs    string  `json:"commentEffectDescEs" dc:"公屏评论特效说明(西班牙语)"`
 	CommentEffectDescPt    string  `json:"commentEffectDescPt" dc:"公屏评论特效说明(葡萄牙语)"`
 	CommentEffectDescHi    string  `json:"commentEffectDescHi" dc:"公屏评论特效说明(印地语)"`
 	CommentEffectDescId    string  `json:"commentEffectDescId" dc:"公屏评论特效说明(印尼语)"`
+	CommentEffectDescAr    string  `json:"commentEffectDescAr" dc:"公屏评论特效说明(阿拉伯语)"`
 	CustomerServiceIcon    string  `json:"customerServiceIcon" dc:"客服优先图标资源文件名"`
 	CustomerServiceTitleEn string  `json:"customerServiceTitleEn" dc:"客服优先标题(英文)"`
 	CustomerServiceTitleEs string  `json:"customerServiceTitleEs" dc:"客服优先标题(西班牙语)"`
 	CustomerServiceTitlePt string  `json:"customerServiceTitlePt" dc:"客服优先标题(葡萄牙语)"`
 	CustomerServiceTitleHi string  `json:"customerServiceTitleHi" dc:"客服优先标题(印地语)"`
 	CustomerServiceTitleId string  `json:"customerServiceTitleId" dc:"客服优先标题(印尼语)"`
+	CustomerServiceTitleAr string  `json:"customerServiceTitleAr" dc:"客服优先标题(阿拉伯语)"`
 	CustomerServiceDescEn  string  `json:"customerServiceDescEn" dc:"客服优先说明(英文)"`
 	CustomerServiceDescEs  string  `json:"customerServiceDescEs" dc:"客服优先说明(西班牙语)"`
 	CustomerServiceDescPt  string  `json:"customerServiceDescPt" dc:"客服优先说明(葡萄牙语)"`
 	CustomerServiceDescHi  string  `json:"customerServiceDescHi" dc:"客服优先说明(印地语)"`
 	CustomerServiceDescId  string  `json:"customerServiceDescId" dc:"客服优先说明(印尼语)"`
+	CustomerServiceDescAr  string  `json:"customerServiceDescAr" dc:"客服优先说明(阿拉伯语)"`
 }
 
 type UpdateVipCfgRes struct {
@@ -196,6 +214,7 @@ type AppVipPrivilegeI18nText struct {
 	Pt string `json:"pt" dc:"葡萄牙语"`
 	Hi string `json:"hi" dc:"印地语"`
 	Id string `json:"id" dc:"印尼语"`
+	Ar string `json:"ar" dc:"阿拉伯语"`
 }
 
 // AppVipPrivilegeItem App端VIP特权项(按开关动态组装)

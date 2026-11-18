@@ -8,4 +8,5 @@ type FirstRechargePrivilege struct {
 	DescPt string `json:"descPt"`
 	DescHi string `json:"descHi"`
 	DescId string `json:"descId"`
+	DescAr string `json:"descAr"`
 }

@@ -103,8 +103,8 @@ func collectActivityMessageFileNames(rows []*entity.ActivityMessage) []string {
 			continue
 		}
 		for _, name := range []string{
-			row.IconEn, row.IconEs, row.IconPt, row.IconHi, row.IconId,
-			row.BgEn, row.BgEs, row.BgPt, row.BgHi, row.BgId,
+			row.IconEn, row.IconEs, row.IconPt, row.IconHi, row.IconId, row.IconAr,
+			row.BgEn, row.BgEs, row.BgPt, row.BgHi, row.BgId, row.BgAr,
 		} {
 			name = strings.TrimSpace(name)
 			if name == "" || strings.HasPrefix(name, "http://") || strings.HasPrefix(name, "https://") {
