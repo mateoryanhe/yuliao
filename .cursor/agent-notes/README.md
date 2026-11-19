@@ -15,6 +15,17 @@
 - **未到位**：`go-review`、`go-prod`、`cms-review`、`cms-prod` 设 `DEPLOY_ENABLED=0`，勿误连直播审/正式 IP
 - 说明：`pub-tool/DEPLOY.md`
 
+## 姊妹仓直播（sara-live-server）
+
+- 目录 `D:\company-code\sara-live-server`，远程 `mateoryanhe/sara-live-server`
+
+### 双仓改代码约定（2026-11-19，用户）
+
+- **直播 / 语聊各开独立对话**；默认**只改当前 Cursor 工作区对应仓库**的代码与 CMS。
+- **不要**在未点名时顺手改姊妹仓、不要默认双仓同步 diff。
+- 仅当用户明确说「直播也改」「sara 也改」「两个仓都改」等，才去另一目录改代码。
+- 日报/周报、只读核对另一仓 `git log`/`status` 仍可按 `dual-repos-yuliao-sara.mdc` 做，不算改代码。
+
 ## 规则索引（`.cursor/rules/`）
 
 | 文件 | 内容 |
