@@ -2028,6 +2028,7 @@ export interface AnchorVideoPriceTierQuery extends PageQuery {
 export interface LiveRoomTag {
     id: string
     name: string
+    code: string
     sort: number
     isSpecial: boolean
     createdAt: string
