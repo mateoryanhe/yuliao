@@ -1,0 +1,6 @@
+# 仅当本机数据仍在旧卷 docker_mariadb_data 时使用一次：
+#   docker compose -f docker-compose.yml -f docker-compose.legacy-volume.yml up -d
+volumes:
+  mariadb_data:
+    external: true
+    name: docker_mariadb_data

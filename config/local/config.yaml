@@ -1,6 +1,6 @@
 server:
   ###系统配置
-  address: 9443  #http服务端口
+  address: 9444  #http服务端口(双仓本地: yuliao=9444, sara=9443)
   openapiPath: "/f9acdb1da4ed11ecc115d613e291af14-api.json" # OpenAPI接口文档地址(仅本地)
   openapiExportAll: false # OpenAPI导出范围:false=仅App端(含推送),true=全部(App+CMS)
   swaggerPath: "/f9acdb1da4ed11ecc115d613e291af14-swagger"  # 旧 App SwaggerUI(仅本地)

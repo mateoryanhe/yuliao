@@ -14,6 +14,11 @@ export default defineConfig(({mode}) => {
     const env = loadEnv(mode, process.cwd(), '')
     const base = env.VITE_BASE_PATH || '/'
     const appVersion = `${mode}-${Date.now().toString(36)}`
+    const goApiTarget = env.VITE_GO_API_TARGET || 'http://127.0.0.1:9444'
+    const devApiViaProxy =
+        mode === 'development' &&
+        (env.VITE_API_BASE_URL === '/local-api' ||
+            (env.VITE_API_BASE_URL || '').startsWith('/local-api'))
 
     return {
         base,
@@ -38,6 +43,15 @@ export default defineConfig(({mode}) => {
             host: '0.0.0.0',
             port: 5173,
             open: true,
+            proxy: devApiViaProxy
+                ? {
+                      '/local-api': {
+                          target: goApiTarget,
+                          changeOrigin: true,
+                          rewrite: (path) => path.replace(/^\/local-api/, ''),
+                      },
+                  }
+                : undefined,
         },
         build: {
             outDir: 'D:\\root\\cms',

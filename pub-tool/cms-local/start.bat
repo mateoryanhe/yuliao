@@ -9,7 +9,7 @@ echo   CMS local start (Vite)
 echo ========================================
 echo CMS dir : %CMS_DIR%
 echo Dev URL : %CMS_DEV_URL%
-echo API     : %CMS_API_HINT%  (.env.development)
+echo API     : Vite /local-api -^> %CMS_API_HINT%  (see cms/.env.development)
 echo.
 
 if not exist "%CMS_DIR%\package.json" (
@@ -46,7 +46,7 @@ if not exist "node_modules\" (
 )
 
 echo Starting: npm run dev
-echo Tip: keep local Go API on %CMS_API_HINT% (config/local address 9443)
+echo Tip: keep local Go API on %CMS_API_HINT% (config/local address 9444)
 echo.
 
 call npm run dev

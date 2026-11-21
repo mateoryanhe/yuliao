@@ -44,7 +44,7 @@ if not exist "%CHROME_PROFILE%" mkdir "%CHROME_PROFILE%" 2>nul
 
 call :ReleaseChromeProfileLock
 
-if not defined API_BASE set "API_BASE=http://127.0.0.1:9443"
+if not defined API_BASE set "API_BASE=http://127.0.0.1:9444"
 
 if not defined HTTP_LOG_ENABLED set "HTTP_LOG_ENABLED=true"
 if not defined HTTP_LOG_DIR (

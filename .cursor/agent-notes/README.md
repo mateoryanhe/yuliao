@@ -131,11 +131,13 @@
 - 已去 pause：`go-test`/`go-prod`/`go-review` 的 `deploy.bat`、`cms-test/upload.bat`，以及对应 `一键部署.bat`
 - 固定：`pub-tool/go-test/pin-to-taskbar.bat` 或 `pub-tool/pin-all-taskbar.bat`，再拖桌面快捷方式到任务栏
 
-## 本地 Go / CMS（2026-09-07）
+## 本地 Go / CMS（2026-09-07，2026-11-20 补 DB）
 
-- Go：`pub-tool/go-local/start.bat`（或 `一键启动.bat`）— 停 9443 → `go build` 到 `go-build/xr-game-server.exe` → 以 `config/local` 为 cwd 启动（读 `config/local/config.yaml`）
-- CMS：`pub-tool/cms-local/start.bat` — `npm run dev`（5173）
-- **时间展示/日筛选**：统一 `cms/src/utils/server-datetime.ts`（UTC+0）；勿用 `toLocaleString()` / 本地 `getHours()`
+1. **MariaDB（双 Docker）**：`pub-tool/mariadb-local/create-docker.bat` → `yuliao-mariadb` **3390**；两仓 DB 一起起：`start-both-db.bat`（会再调直播仓 `sara-live-server/pub-tool/mariadb-local` → **3391**）
+2. **Go**：`pub-tool/go-local/start.bat` — **9444**；`config/local` → `127.0.0.1:3390/live_db`，`server.id: 1`
+3. **CMS**：`5173`，`/local-api` → `9444`
+4. **直播仓 sara-live-server 本地**：DB **3391** / Go **9443** / CMS **5174** / `server.id: 2`（详见姊妹仓 `pub-tool/mariadb-local/README.md`）
+5. **时间展示/日筛选**：`cms/src/utils/server-datetime.ts`（UTC+0）；勿用 `toLocaleString()` / 本地 `getHours()`
 
 ## 2026-08-28 代码丢失（摘要）
 
@@ -273,7 +275,7 @@
 
 - 脚本：`pub-tool/cms-local/start.bat`（或 `一键启动.bat`）
 - 目录：`cms/`，`npm run dev`，默认 http://127.0.0.1:5173
-- API：`.env.development` → `VITE_API_BASE_URL=http://127.0.0.1:9443`（需先起本地 Go）
+- API：`.env.development` → `/local-api` 代理到 `9444`（需先起本地 Go）
 
 ## 直播间 1v1 通话充值门槛（2026-09-07）
 
